@@ -1,0 +1,27 @@
+package exercise1;
+
+import java.util.Scanner;
+
+public class Backwards {
+	
+	public static void main(String[] args) {
+		System.out.println("Enter a string: ");
+		Scanner scan = new Scanner(System.in);
+		String str = scan.nextLine();
+		
+		new StringBuilder(str).reverse().toString();
+		
+		System.out.println(str);
+		/*		int length = str.length();
+		char two = str.charAt(2);
+		int j = str.length();
+		String[] strArr = new String[str.length()];
+		
+		for (int i = 0; i < str.length(); i++) {
+			strArr[j] = Character.toString(str.charAt(i));
+			j--;
+		}
+		String.Join("", strArr);
+		System.out.println(strArr);*/
+	}
+}

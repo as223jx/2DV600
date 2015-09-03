@@ -1,0 +1,71 @@
+package exercise5;
+
+import java.util.Scanner;
+
+public class Diamond {
+	
+	public static void main (String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter a positive odd integer: ");
+		int integer = scan.nextInt();
+		StringBuilder sb = new StringBuilder();
+		
+		for (int i = 0; i < integer; i++) {
+			System.out.println(i);
+			if(i % 2 != 0){
+				int spaces = (integer - i) / 2;
+				for (int j = 0; j < spaces; j++) {
+					sb.append(" ");
+				}
+				for (int k = 0; k < i; k++) {
+					sb.append("*");
+				}
+				for (int l = 0; l < spaces; l++) {
+					sb.append(" ");
+				}
+				sb.append("\n");
+			}
+		}
+		
+		for (int i = 0; i < integer; i++) { 
+			sb.append("*");
+		}
+		
+		sb.append("\n");
+		
+		System.out.println("int: " +integer);
+		
+		int count = integer;
+		
+		for (int i = 0; i < integer; i++) {
+
+			System.out.println(i);
+			if(i % 2 != 0){
+				int spaces = (count - i) / 2;
+				for (int j = 0; j < spaces; j++) {
+					sb.append(" ");
+				}
+				for (int k = 0; k < i; k++) {
+					sb.append("*");
+				}
+				for (int l = 0; l < spaces; l++) {
+					sb.append(" ");
+				}
+				sb.append("\n");
+			}
+			count --;
+		}
+		
+		System.out.println("Before reverse: \n" + sb.toString());
+		
+		String top = sb.toString();
+
+		
+		String bot = sb.reverse().toString();
+		System.out.println("After reverse: \n" + sb.toString());
+		String full = top + bot;
+
+		
+	}
+}

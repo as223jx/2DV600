@@ -1,0 +1,28 @@
+package exercise5;
+
+import java.util.Scanner;
+
+public class Diamond {
+	
+	public static void main (String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter a positive odd integer: ");
+		int integer = scan.nextInt();
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < integer; i++) {
+			int spaces = (integer - i) / 2;
+			for (int j = 0; j < spaces; j++) {
+				sb.append(" ");
+			}
+			sb.append("*");
+			for (int j = 0; j < spaces; j++) {
+				sb.append(" ");
+			}
+			sb.append("\n");
+		}
+		
+		System.out.print(sb.toString());
+		
+	}
+}

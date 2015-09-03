@@ -1,0 +1,12 @@
+package exercise1;
+
+public class Backwards {
+	
+	public static void main(String[] args) {
+		String str = "hej";
+		
+		char two = str.charAt(2);
+		
+		System.out.println(two);
+	}
+}

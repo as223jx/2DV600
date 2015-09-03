@@ -1,0 +1,20 @@
+package exercise3;
+
+import java.util.Scanner;
+
+public class CountDigits {
+	
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter a positive integer: ");
+		int integer = scan.nextInt();
+		
+		int zeros;
+		int odd;
+		int even;
+		int sum;
+		
+	}
+	
+}

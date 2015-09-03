@@ -1,0 +1,29 @@
+package exercise2;
+
+import java.util.Scanner;
+
+public class LargestK {
+	
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Type an integer: ");
+		int n = scan.nextInt();
+		
+		boolean b = true;
+		int count = 0;
+		int largestk = 2;
+		
+		if(n < 2) {
+			largestk = 0;
+		}
+		while(count + largestk < n) {
+			count = count + largestk;
+			largestk = largestk + 2;
+		}
+		
+		System.out.print("LargestK: " + largestk);
+		
+	}
+	
+}

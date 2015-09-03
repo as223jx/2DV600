@@ -1,0 +1,47 @@
+package exercise3;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class HighLow {
+	
+	public static void main(String[] args) {
+		
+		while(true){
+			try{
+				
+				boolean correct = false;
+				int count = 0;
+				Random rand = new Random();
+				int random = rand.nextInt (101);
+				
+				do {
+					count ++;
+					Scanner scan = new Scanner(System.in);
+					System.out.print("Guess a number between 1-100: ");
+					int guess = scan.nextInt();
+			
+					System.out.println("(Cheat sheet! Random is: " + random + ")");
+					
+					if (guess < 1 || guess > 100) {
+						System.out.println("Error! The number should be between 1-100.");
+					}
+					else if (guess == random) {
+						System.out.println("Correct! It took you " + count + " guesses!\n");
+						correct = true;
+					}
+					else if (guess > random) {
+						System.out.println("Hint: Lower\n");
+					}
+					else if (guess < random) {
+						System.out.println("Hint: Higher\n");
+					}
+					
+				} while(!correct);
+				
+			} catch (Exception e) {
+				System.out.println("Error! Make sure you type an integer. ");
+			}
+		}
+	}
+}
